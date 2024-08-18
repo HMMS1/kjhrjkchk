@@ -1,0 +1,312 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* إعدادات عامة */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bcdf64;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* شريط التنقل */
+.header {
+    background: #2c3e50;
+    padding: 10px 0; /* تقليل التباعد في الـ header */
+    color: #ecf0f1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo h1 {
+    margin: 0;
+    font-size: 1.8rem; /* تقليل حجم الخط في الشعار */
+    color: #ecf0f1;
+}
+
+.header nav ul.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* تقليل المسافة بين الروابط */
+}
+
+.header nav ul.nav-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem; /* تقليل حجم الخط في الروابط */
+    padding: 8px 15px; /* تقليل التباعد في الروابط */
+    border-radius: 8px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* قسم الرئيسية */
+.hero {
+    height: 100vh;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.profile-img {
+    width: 30vw;
+    max-width: 150px; /* تحديد الحد الأقصى للعرض إلى 150px */
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3vw;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5vw;
+    margin-bottom: 30px;
+}
+
+/* الميديا كويري للهواتف المحمولة */
+@media (max-width: 768px) {
+    .header {
+        padding: 5px 0; /* تقليل التباعد بشكل أكبر في الـ header على الهواتف */
+    }
+
+    .header .logo h1 {
+        font-size: 1.5rem; /* تقليل حجم الخط في الشعار على الهواتف */
+    }
+
+    .header nav ul.nav-links li a {
+        font-size: 0.9rem; /* تقليل حجم الخط في الروابط على الهواتف */
+        padding: 6px 12px; /* تقليل التباعد في الروابط على الهواتف */
+    }
+
+    .profile-img {
+        width: 50vw; /* تعيين العرض إلى 50% من عرض الشاشة للأجهزة الأصغر */
+        max-width: 120px; /* تحديد الحد الأقصى للعرض إلى 120px */
+    }
+
+    .hero h1 {
+        font-size: 5vw;
+    }
+
+    .hero p {
+        font-size: 2.5vw;
+    }
+}
+
+/* الميديا كويري للأجهزة اللوحية */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header .logo h1 {
+        font-size: 1.7rem;
+    }
+
+    .header nav ul.nav-links li a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .profile-img {
+        width: 35vw;
+        max-width: 140px; /* تحديد الحد الأقصى للعرض إلى 140px */
+    }
+
+    .hero h1 {
+        font-size: 4vw;
+    }
+
+    .hero p {
+        font-size: 2vw;
+    }
+}
+
+
+
+.hero .btn {
+    padding: 12px 25px;
+    background-color: #fefefe; /* برتقالي دافئ */
+    color: #2c3e50; /* أزرق داكن */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.hero .btn:hover {
+    background-color: #3498db; /* برتقالي داكن */
+}
+
+
+
+
+/* الأقسام */
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2c3e50; /* أزرق داكن */
+}
+
+/* قسم من أنا */
+.about p {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    color: #666; /* لون رمادي متوسط */
+}
+
+/* قسم المهارات */
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: #ffffff; /* خلفية بيضاء */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #3498db; /* أزرق فاتح */
+}
+
+.skill-item p {
+    font-size: 1.1rem;
+    color: #666; /* لون رمادي متوسط */
+}
+
+/* قسم الأعمال */
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.project-item {
+    background-color: #ffffff; /* خلفية بيضاء */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #3498db; /* أزرق فاتح */
+}
+
+.project-item p {
+    font-size: 1.1rem;
+    color: #666; /* لون رمادي متوسط */
+}
+
+/* قسم التواصل */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 12px;
+    background-color: #3498db; /* أزرق فاتح */
+    color: #ecf0f1; /* لون فاتح للنصوص بدلاً من الأبيض */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.contact button:hover {
+    background-color: #2980b9; /* أزرق داكن */
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #2c3e50; /* أزرق داكن */
+}
+
+.contact-info .social-links a {
+    text-decoration: none;
+    color: #3498db; /* أزرق فاتح */
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.4s ease;
+}
+
+.contact-info .social-links a:hover {
+    color: #e67e22; /* برتقالي دافئ */
+}
+
+/* التذييل */
+footer {
+    background: #2c3e50; /* أزرق داكن */
+    color: #ecf0f1; /* لون فاتح للنصوص بدلاً من الأبيض */
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
